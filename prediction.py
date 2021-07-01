@@ -36,7 +36,7 @@ def clean_detections(detections):
     for i in range(0, num_detections):
         label = detections['detection_class_entities'][i].decode('utf-8')
         score = detections['detection_scores'][i]
-        if label == 'Dog' and score > 0.3:
+        if label == 'Dog' and score > 0.2:
             d = {
                 'box': {
                     'yMin': detections['detection_boxes'][i][0],
